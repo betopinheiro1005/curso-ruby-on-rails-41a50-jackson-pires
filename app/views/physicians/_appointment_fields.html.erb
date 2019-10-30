@@ -1,0 +1,9 @@
+<li class="control-group nested-fields">
+  <div class="controls">
+    <%= f.datetime_select :appointment_date %>>
+    <%= f.fields_for :patient do |appointment_patient| %>
+      <%= appointment_patient.text_field :name %>
+    <% end %>
+    <%= link_to_remove_association "Remover", f, class: "btn btn-default" %>
+  </div>
+</li>

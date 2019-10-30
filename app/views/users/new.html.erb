@@ -1,0 +1,9 @@
+<% content_for :head do %>
+  <%= javascript_include_tag 'notify' %>
+<% end %>
+
+<h1>New User</h1>
+
+<%= render 'form', user: @user %>
+
+<%= link_to 'Back', users_path %>
